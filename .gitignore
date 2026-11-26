@@ -1,0 +1,35 @@
+# 虚拟环境 & 构建产物
+.venv/
+build/
+third_party/toolchain/
+third_party/src/
+third_party/_cache/
+third_party/lib/
+third_party/include/
+third_party/ca-bundle.crt
+third_party/cacert.pem
+
+# 运行期数据
+data/
+downloads/
+logs/
+.cache/
+.tmp/
+settings.json
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# 编辑器
+.vscode/
+.idea/
+*.swp
+
+# 系统
+Thumbs.db
+desktop.ini
+
+# 打包产物
+dist/

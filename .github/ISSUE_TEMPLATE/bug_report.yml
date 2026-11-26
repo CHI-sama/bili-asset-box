@@ -1,0 +1,50 @@
+name: Bug 反馈
+description: 下载失败、界面异常、崩溃……请按这个模板填，方便复现。
+title: "[bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        贴 issue 之前，建议先在软件里「反馈 → 生成诊断包」，
+        把生成的 `bili_asset_box_feedback_*.zip` 直接拖进来。
+        诊断包已经自动抹掉 Cookie / token，只带版本、系统信息和日志尾部。
+  - type: input
+    id: version
+    attributes:
+      label: 软件版本
+      description: 设置页 / 日志第一行里有；内核版本形如 0.1.0
+      placeholder: "0.1.0"
+    validations:
+      required: true
+  - type: input
+    id: system
+    attributes:
+      label: 系统
+      placeholder: "Windows 11 22631 / Python 3.13.7"
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: 出了什么问题
+      description: 做了什么、期望什么、实际发生了什么；有报错文本就贴上。
+      placeholder: |
+        1. 在发现页搜索「初音未来」
+        2. 打开某个收藏集，点全部下载
+        3. 第 3 张卡下载失败，提示 xxx
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: 日志 / 诊断包
+      description: 可以只贴最后几十行，也可以额外说明 zip 里的文件。
+      render: text
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: 自查
+      options:
+        - label: 我已经升级到最新版本，并且问题还能复现
+        - label: 我已经确认这不是 B 站接口本身的临时故障
